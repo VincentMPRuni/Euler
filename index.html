@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>Ejercicio 2: Project Euler</title>
+</head>
+<body style="background-color:#9EC4E3;">
+
+<h1 style="color:#00008B; background-color:#077590; font-family:algerian;"><u>Segundo ejercicio:</u></h1>
+<center><pre><b><u>Enunciado de la pregunta 
+(2):</u></b></pre></center>
+<p> Cada nuevo término en la secuencia de Fibonacci se genera sumando los dos términos anteriores. Al comenzar con 1 y 2, los primeros 10 términos serán:</p>
+<p> 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... </p>
+<p>Considerando los términos de la secuencia de Fibonacci cuyos valores no superan los cuatro millones, <em>encuentre la suma de los términos pares. </em></p>
+
+<b>Resultado:</b> <span id="txtResultado"></span>
+
+    <script> 
+        let resultado = 2; // (Variable central)
+        let primerNumero = 1;   // (Variable de arranque)
+        let segundoNumero = 2;  // (Variable de arranque)
+
+        for (let i = 0; segundoNumero < 4000000; i++) {  //(Margen central para definir los límites generales de nuestro proceso lógico central, aquí definimos el límite superior, complementado con los inferiores. )
+            let aux = primerNumero + segundoNumero; //(Regla de formación de la sucesión de Fibonacci; para que avance la secuencia en base a esta forma)
+            primerNumero = segundoNumero; // (Después de los procesos base, se continua el bucle definido, pero en este caso, encargado en desarrollar una secuencia de cambios consecutivos lógicos, donde el "primerNumero" pasa a ser el "SegundoNumero")
+            segundoNumero = aux;          
+            if (aux % 2 == 0) { //(Nos hará la suma, solo en el caso de que sea par) 
+            resultado += aux; 
+          }
+        } 
+
+        document.getElementById("txtResultado").innerHTML = resultado;
+    </script>
+
+<center><p>(Reflexión) <br><cite>- Richard Hamming</cite> dijo: “El propósito de la computación es la comprensión, no los números.”</p></center>
+<center><p>(Muchas Gracias)</p></center>
+<p>Vídeo referencial<cite> de ATL Academy: </cite><a href="https://www.youtube.com/@atl.academy" target="_blank">La página de ATL Academy (by Lucas Moy)</a>.</p>
+<p>Estimado maestro, seguiré practicando para entender mejor este bonito mundo que es la programación, por el momento recien me estoy acoplando a sus procesos, pero cada vez me va gustando más; muchas gracias por su apoyo.</p>
+<center><img src="https://www.einstieg-informatik.de/wp-content/uploads/2019/12/project-euler.png"></center>
+<center><textarea name="comentarios" rows="20%" cols="80%">Escribe aquí tus comentarios</textarea></center>
+</body>
+</html>
